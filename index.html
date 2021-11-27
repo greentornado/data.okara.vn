@@ -82,20 +82,31 @@
 
             <div class="asset_4">
 
-                <span>Miễn phí Data 4G khi hát karaoke trên</span><br/>
-                <span>ứng dụng <span style="font-weight: 600;">Okara Mobile</span> và website <span style="font-weight: 600;">m.okara.vn</span></span>
+                <span>Miễn phí Data 4G khi hát karaoke trên</span><br />
+                <span>ứng dụng <span style="font-weight: 600;">Okara Mobile</span> và website <span
+                        style="font-weight: 600;">m.okara.vn</span></span>
 
             </div>
-
+            <script>
+                $(document).ready(function ($) {
+                    var deviceAgent = navigator.userAgent.toLowerCase();
+                    var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+                    if (agentID) {
+                        $('#myLink').attr('href', 'sms:999&body=Q6');
+                    } else {
+                        $('#myLink').attr('href', 'sms:999?body=Q6');
+                    }
+                });
+            </script>
             <div class="asset_5">
-                <a href="sms:999?body=Q6">
+                <a id="myLink" href="sms:999?body=Q6">
                     <div class='btn_register'>ĐĂNG KÝ NGAY ></div>
                 </a>
             </div>
 
             <div class="asset_6">
-                <span>Soạn tin Q6 gửi 999</span><br/>
-                <span>(5.000đ/ngày, nhận 700MB/ngày)</span><br/>
+                <span>Soạn tin Q6 gửi 999</span><br />
+                <span>(5.000đ/ngày, nhận 700MB/ngày)</span><br />
                 <span>Áp dụng hết ngày 28/12/2021</span>
             </div>
 
